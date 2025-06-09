@@ -119,7 +119,7 @@ section {
 }
 
 .content {
-  max-width: 60rem;
+  max-width: 50rem; /* Diminui o max-width das frases da seção inicial */
   text-align: left;
 }
 
@@ -648,7 +648,7 @@ html {
   justify-content: space-between;
   width: 30px;
   height: 21px;
-  background: transparent;
+  background: transparent; /* Remove o background dos 3 pontinhos */
   border: none;
   cursor: pointer;
   padding: 0;
@@ -666,25 +666,20 @@ html {
 /* Responsividade */
 @media (max-width: 768px) {
   :root {
-    font-size: 8px; /* Reduz a fonte base para melhor proporção em telas pequenas */
+    font-size: 8px;
   }
 
   .mobile-menu-btn {
     display: flex;
     order: 1;
-    background-color: #505a42; /* Cor da barra do menu hamburguer */
-    color: #ffffff;
-    padding: 0.5rem;
-    border-radius: 5px;
-  }
-
-  .mobile-menu-btn span {
-    background-color: #fff; /* Cor das linhas do hamburguer */
   }
 
   .logo {
     order: 2;
     margin: 0 auto;
+    position: absolute; /* Centraliza a logo no nav */
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .icons {
@@ -693,12 +688,12 @@ html {
   }
 
   .icons img {
-    display: none; /* Remove o ícone do carrinho em mobile */
+    display: none; /* Remove o ícone do carrinho */
   }
 
-  .icons img[src*="lupa"] { /* Seleciona apenas o ícone da lupa */
-    display: block; /* Mantém a lupa visível */
-    margin-right: 1rem; /* Move a lupa mais para o canto direito */
+  .icons img[src*="lupa"] {
+    display: block;
+    margin-right: 0; /* Remove margem extra da lupa */
   }
 
   .navbar {
@@ -716,7 +711,7 @@ html {
 
   .navbar.active {
     left: 0;
-    transition: left 0.3s ease; /* Transição ao abrir/fechar */
+    transition: left 0.3s ease; /* Transição ao voltar ao normal */
   }
 
   .navbar a {
@@ -725,7 +720,9 @@ html {
     padding: 1rem;
     border-bottom: var(--border);
     width: 100%;
-    text-align: center; /* Centraliza os itens verticalmente */
+    text-align: center;
+    color: #fff; /* Cor branca para os tópicos */
+    display: block; /* Garante que fiquem um embaixo do outro como lista */
   }
 
   .header section {
@@ -733,10 +730,11 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    position: relative; /* Necessário para o posicionamento absoluto da logo */
   }
 
   .home-container section {
-    min-height: 60vh; /* Reduz a altura da foto de fundo para mobile */
+    min-height: 60vh;
     padding: 2rem 1rem;
     justify-content: center;
   }
