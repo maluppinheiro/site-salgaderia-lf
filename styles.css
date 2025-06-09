@@ -739,10 +739,12 @@ html {
   .content h3 {
     font-size: 3.5rem;
     margin-top: 80px;
+    max-width: 60%;
   }
 
   .content p {
     font-size: 1.6rem;
+    max-width: 70%;
   }
 
   .btn {
@@ -778,6 +780,7 @@ html {
 
   .menu .box-container .box .descricao-menu {
     font-size: 1.2rem;
+    max-width: 70%;
   }
 
   .menu .box-container .box .price {
