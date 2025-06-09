@@ -119,7 +119,7 @@ section {
 }
 
 .content {
-  max-width: 50rem; /* Diminui o max-width das frases da seção inicial */
+  max-width: 50rem;
   text-align: left;
 }
 
@@ -648,7 +648,7 @@ html {
   justify-content: space-between;
   width: 30px;
   height: 21px;
-  background: transparent; /* Remove o background dos 3 pontinhos */
+  background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -676,10 +676,8 @@ html {
 
   .logo {
     order: 2;
-    margin: 0 auto;
-    position: absolute; /* Centraliza a logo no nav */
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto; /* Centraliza a logo no fluxo normal */
+    width: 80px; /* Garante que a largura da logo seja fixa */
   }
 
   .icons {
@@ -688,30 +686,30 @@ html {
   }
 
   .icons img {
-    display: none; /* Remove o ícone do carrinho */
+    display: none;
   }
 
   .icons img[src*="lupa"] {
     display: block;
-    margin-right: 0; /* Remove margem extra da lupa */
+    margin-right: 0;
   }
 
   .navbar {
     position: fixed;
     top: 70px;
     left: -100%;
-    width: 80%;
+    width: 70%; /* Reduz a largura para 70% */
     height: calc(100vh - 70px);
     background: var(--black);
     flex-direction: column;
     padding: 2rem;
-    transition: left 0.3s ease; /* Transição ao abrir/fechar */
+    transition: left 0.3s ease;
     z-index: 100;
   }
 
   .navbar.active {
     left: 0;
-    transition: left 0.3s ease; /* Transição ao voltar ao normal */
+    transition: left 0.3s ease;
   }
 
   .navbar a {
@@ -721,8 +719,8 @@ html {
     border-bottom: var(--border);
     width: 100%;
     text-align: center;
-    color: #fff; /* Cor branca para os tópicos */
-    display: block; /* Garante que fiquem um embaixo do outro como lista */
+    color: #fff;
+    display: block;
   }
 
   .header section {
@@ -730,7 +728,6 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    position: relative; /* Necessário para o posicionamento absoluto da logo */
   }
 
   .home-container section {
