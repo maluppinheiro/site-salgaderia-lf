@@ -800,7 +800,7 @@ html {
     margin-top: 2rem; /* Additional spacing from top */
     padding: 4rem 0.8rem 0.8rem 0.8rem; /* Increased top padding */
     max-width: 90%;
-    background: rgba(0, 0, 0, 0.7); /* Better contrast */
+    
   }
 
   .content h3 {
