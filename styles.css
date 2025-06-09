@@ -672,6 +672,14 @@ html {
   .mobile-menu-btn {
     display: flex;
     order: 1;
+    background-color: #505a42; /* Cor da barra do menu hamburguer */
+    color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+
+  .mobile-menu-btn span {
+    background-color: #fff; /* Cor das linhas do hamburguer */
   }
 
   .logo {
@@ -684,6 +692,15 @@ html {
     margin-left: auto;
   }
 
+  .icons img {
+    display: none; /* Remove o ícone do carrinho em mobile */
+  }
+
+  .icons img[src*="lupa"] { /* Seleciona apenas o ícone da lupa */
+    display: block; /* Mantém a lupa visível */
+    margin-right: 1rem; /* Move a lupa mais para o canto direito */
+  }
+
   .navbar {
     position: fixed;
     top: 70px;
@@ -693,12 +710,13 @@ html {
     background: var(--black);
     flex-direction: column;
     padding: 2rem;
-    transition: left 0.3s ease;
+    transition: left 0.3s ease; /* Transição ao abrir/fechar */
     z-index: 100;
   }
 
   .navbar.active {
     left: 0;
+    transition: left 0.3s ease; /* Transição ao abrir/fechar */
   }
 
   .navbar a {
@@ -707,139 +725,140 @@ html {
     padding: 1rem;
     border-bottom: var(--border);
     width: 100%;
+    text-align: center; /* Centraliza os itens verticalmente */
   }
 
   .header section {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem; /* Reduz padding para economizar espaço */
+    padding: 1rem;
   }
 
   .home-container section {
-    min-height: 80vh; /* Reduz altura mínima para melhor ajuste em telas pequenas */
-    padding: 2rem 1rem; /* Menor padding para mais espaço */
-    justify-content: center; /* Centraliza conteúdo */
+    min-height: 60vh; /* Reduz a altura da foto de fundo para mobile */
+    padding: 2rem 1rem;
+    justify-content: center;
   }
 
   .content h3 {
-    font-size: 3.5rem; /* Reduz tamanho da fonte para caber melhor */
-    margin-top: 80px; /* Ajusta margem superior */
+    font-size: 3.5rem;
+    margin-top: 80px;
   }
 
   .content p {
-    font-size: 1.6rem; /* Reduz tamanho da descrição */
+    font-size: 1.6rem;
   }
 
   .btn {
-    padding: 0.8rem 2rem; /* Botão menor para melhor proporção */
+    padding: 0.8rem 2rem;
     font-size: 1.5rem;
   }
 
   .title {
-    font-size: 2.5rem; /* Reduz tamanho do título */
+    font-size: 2.5rem;
   }
 
   .description {
-    font-size: 1.4rem; /* Reduz tamanho da descrição */
+    font-size: 1.4rem;
   }
 
   .box-container {
-    grid-template-columns: 1fr; /* Uma coluna para itens do menu e avaliações */
-    gap: 1rem; /* Reduz espaço entre itens */
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .menu .box-container .box {
-    padding: 2rem; /* Menor padding para economizar espaço */
+    padding: 2rem;
   }
 
   .menu .box-container .box img {
-    height: 14rem; /* Reduz tamanho da imagem */
+    height: 14rem;
     width: 14rem;
   }
 
   .menu .box-container .box h3 {
-    font-size: 1.8rem; /* Reduz tamanho do título do item */
+    font-size: 1.8rem;
   }
 
   .menu .box-container .box .descricao-menu {
-    font-size: 1.2rem; /* Reduz tamanho da descrição */
+    font-size: 1.2rem;
   }
 
   .menu .box-container .box .price {
-    font-size: 1.8rem; /* Reduz tamanho do preço */
+    font-size: 1.8rem;
   }
 
   .menu .box-container .box .descricao-2 {
-    font-size: 1.4rem; /* Reduz tamanho da descrição secundária */
+    font-size: 1.4rem;
   }
 
   .review .box-container .box {
-    padding: 2rem 1rem; /* Menor padding */
+    padding: 2rem 1rem;
   }
 
   .review .box-container .box p {
-    font-size: 1.3rem; /* Reduz tamanho do texto de avaliação */
+    font-size: 1.3rem;
   }
 
   .review .box-container .box h3 {
-    font-size: 1.8rem; /* Reduz tamanho do nome do cliente */
+    font-size: 1.8rem;
   }
 
   .review .box-container .box .user {
-    height: 5rem; /* Reduz tamanho da imagem do usuário */
+    height: 5rem;
     width: 5rem;
   }
 
   .contact .btn {
-    padding: 10px 20px; /* Botão menor */
-    font-size: 2rem; /* Reduz tamanho da fonte */
+    padding: 10px 20px;
+    font-size: 2rem;
   }
 
   .contact form {
-    max-width: 90%; /* Ajusta formulário para ocupar mais espaço */
-    padding: 0 1rem; /* Adiciona padding lateral */
+    max-width: 90%;
+    padding: 0 1rem;
   }
 
   .contact form input,
   .contact form textarea {
-    font-size: 1.4rem; /* Reduz tamanho da fonte */
+    font-size: 1.4rem;
   }
 
   .address-info h3 {
-    font-size: 2.5rem; /* Reduz tamanho do título do endereço */
+    font-size: 2.5rem;
   }
 
   .address-info p {
-    font-size: 1.8rem; /* Reduz tamanho do texto do endereço */
-    max-width: 90%; /* Ajusta largura para telas menores */
+    font-size: 1.8rem;
+    max-width: 90%;
   }
 
   .footer .contact-info {
-    font-size: 1.4rem; /* Reduz tamanho da fonte */
-    padding: 1.5rem 1rem; /* Menor padding */
+    font-size: 1.4rem;
+    padding: 1.5rem 1rem;
   }
 
   .cart-modal-content {
-    width: 95%; /* Ajusta modal para ocupar mais espaço */
-    padding: 1.5rem; /* Menor padding */
+    width: 95%;
+    padding: 1.5rem;
   }
 
   .cart-modal-content h2 {
-    font-size: 2rem; /* Reduz tamanho do título do modal */
+    font-size: 2rem;
   }
 
   .cart-item p {
-    font-size: 1.4rem; /* Reduz tamanho do texto do item */
+    font-size: 1.4rem;
   }
 
   .cart-item button {
-    font-size: 1.2rem; /* Reduz tamanho do botão */
+    font-size: 1.2rem;
     padding: 0.4rem 0.8rem;
   }
 
   .cart-total p {
-    font-size: 1.6rem; /* Reduz tamanho do total */
+    font-size: 1.6rem;
   }
 }
 
