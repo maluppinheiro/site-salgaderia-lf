@@ -133,7 +133,7 @@ section {
     color: #fff;
     font-size: 5rem; /* Kept for shorter section */
     text-transform: uppercase;
-    margin-top: 60px; /* Removed margin, handled by padding-top */
+    margin-top: 100px; /* Removed margin, handled by padding-top */
     line-height: 1.2;
 }
 
